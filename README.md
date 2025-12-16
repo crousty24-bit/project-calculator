@@ -23,10 +23,10 @@ This project is about creating a calculator. It should :
 
 
 
-* **create 4 functions** for each basic math operators : add, subtract, multiply, divide
-* define whats a **calculator operation** : num (operators) num = result
-* **create a function "operate"** that takes an operation and calls one of the 4 functions operators
-* **create a basic HTML structure** that contains :
+* **create 4 functions** for each basic math operators : add, subtract, multiply, divide **✅**
+* define whats a **calculator operation** : num (operators) num = result **✅**
+* **create a function "operate"** that takes an operation and calls one of the 4 functions operators **✅**
+* **create a basic HTML structure** that contains : **✅**
 
 &nbsp;	- div buttons for each digits, operators and =
 
@@ -35,6 +35,8 @@ This project is about creating a calculator. It should :
 &nbsp;	- display calculator : Numbers, operation, results
 
 
+
+--> structure and code is set and safe to continue further.
 
 
 
