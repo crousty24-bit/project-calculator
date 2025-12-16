@@ -10,3 +10,16 @@ console.log(multiply(2, 4))
 
 const divide = (a, b) => a / b;
 console.log(divide(4, 2))
+
+// 2. operate function :
+const operate = (num1, num2, operator) => {
+    if (operator === '+') {
+        return add(num1, num2)
+    } else if (operator === '-') {
+        return subtract(num1, num2)
+    } else if (operator === '*') {
+        return multiply(num1, num2)
+    } else if (operator === '/') {
+        return divide(num1, num2)
+    }
+}
