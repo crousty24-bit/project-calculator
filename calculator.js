@@ -14,7 +14,7 @@ userDigit.addEventListener("click", (event) => {
         digit = target.textContent;
         currentNum = `${currentNum}${digit}`; // 5.1 store digit & display into div calculator
         display.textContent = currentNum;
-        highlight(target);
+        highlight(target);// will mark which digit is clicked
     }
 });
 // 6. link HTML operators & Event 'click' :
@@ -24,7 +24,7 @@ userOperator.addEventListener("click", (event) => {
     if (target.tagName === 'BUTTON') {
         operator = target.textContent;
         //display.textContent = operator; dont want display
-        highlight(target);
+        //highlight(target);
         currentNum = "";//6.2 reset to get num2 later
     }
 })
