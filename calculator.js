@@ -1,12 +1,16 @@
 // 5. link HTML digits buttons & Event 'click' :
 const userDigit = document.getElementById("digits");
+let currentNum = "";
+const display = document.getElementById("calculator");
+
 userDigit.addEventListener("click", (event) => {
     let digit;
     let target = event.target;
     if (target.tagName === 'BUTTON') {
-        //highlight(target);
         digit = target.textContent;
-        console.log(digit);
+        currentNum = `${currentNum}${digit}`; // 5.1 store digit & display into div calculator
+        display.textContent = currentNum;
+        highlight(target);
     }
 });
 
