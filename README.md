@@ -19,7 +19,7 @@ This project is about creating a calculator. It should :
 
 
 
-**For now, I'll only focus on the first 4 steps :**
+**For now, I'll only focus on the first 4 steps : DONE✅**
 
 
 
@@ -28,11 +28,11 @@ This project is about creating a calculator. It should :
 * **create a function "operate"** that takes an operation and calls one of the 4 functions operators **✅**
 * **create a basic HTML structure** that contains : **✅**
 
-&nbsp;	- div buttons for each digits, operators and =
+ 	- div buttons for each digits, operators and =
 
-&nbsp;	- div clear button
+ 	- div clear button
 
-&nbsp;	- display calculator : Numbers, operation, results
+ 	- display calculator : Numbers, operation, results
 
 
 
@@ -40,7 +40,24 @@ This project is about creating a calculator. It should :
 
 
 
-*last update 16/12/25*
+**Next, I'll focus on step 5 \& 6 : WORKING ON...**
 
 
+
+* **make the buttons works** accordingly with JS, **each buttons displays when clicked** : num, operators and THEN the result
+* **add eventListener** for our buttons when "**click**"
+* the num1, num2, operator are **stored Inside variables**
+* WHEN the **=** button is clicked : **triggers the func operate**
+
+&nbsp;	- func operate takes our stored variables as parameters, THEN run accordingly to operator (add, sub, etc.)
+
+&nbsp;	- output the Result and THEN **update the display with that Result**
+
+* **add func to Clear button** : when "click" it resets everything
+
+
+
+
+
+*last update 17/12/25*
 
