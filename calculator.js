@@ -2,11 +2,13 @@
 const userDigit = document.getElementById("digits");
 const display = document.getElementById("calculator");
 const userOperator = document.getElementById("operators");
+const userEqual = document.getElementById("equal");
 // 6.3 placed var to be accessed in global scope
 let currentNum = "";
 let num1 = "";
 let num2 = "";
 let operator = "";
+
 userDigit.addEventListener("click", (event) => {
     let digit;
     let target = event.target;
@@ -27,6 +29,16 @@ userOperator.addEventListener("click", (event) => {
         //highlight(target);
         currentNum = "";//6.2 reset to get num2 later
     }
+})
+// 6.4 linkHTML id"equal" & Event 'click' :
+userEqual.addEventListener("click", (event) => {
+    num2 = currentNum;// new currentNum become num2
+    if (num1 && num2 && operator) {// verify if var exists
+        // 6.5 call func and convert :
+        let result = operate(Number(num1), Number(num2), operator);
+        display.textContent = result;
+        currentNum = result;// result become are new currentNum for next calc
+    } 
 })
 
 // 1. operators functions :
