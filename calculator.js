@@ -1,8 +1,6 @@
-// 5.
-const userNum = document.getElementById("digits");
-console.log(userNum);
-userNum.addEventListener("click", (event) => {
-    console.log("click!");
+// 5. link HTML digits buttons & Event 'click' :
+const userDigit = document.getElementById("digits");
+userDigit.addEventListener("click", (event) => {
     let digit;
     let target = event.target;
     if (target.tagName === 'BUTTON') {
@@ -10,7 +8,6 @@ userNum.addEventListener("click", (event) => {
         digit = target.textContent;
         console.log(digit);
     }
-    
 });
 
 // 1. operators functions :
@@ -38,7 +35,7 @@ const operate = (num1, num2, operator) => {
         return divide(num1, num2)
     }
 }
-console.log(operate(4, 2, '+'));
+/*console.log(operate(4, 2, '+'));
 console.log(operate(4, 2, '-'));
 console.log(operate(4, 2, '*'));
-console.log(operate(4, 2, '/'));
+console.log(operate(4, 2, '/'));*/
