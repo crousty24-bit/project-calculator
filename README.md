@@ -46,6 +46,9 @@ This project is about creating a calculator. It should :
 
 * **make the buttons works** accordingly with JS, **each buttons displays when clicked** : num, operators and THEN the result
 * **add eventListener** for our buttons when "**click**"
+
+&nbsp;	- done for digits buttons **✅**
+
 * the num1, num2, operator are **stored Inside variables**
 * WHEN the **=** button is clicked : **triggers the func operate**
 
