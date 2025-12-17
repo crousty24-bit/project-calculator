@@ -1,3 +1,18 @@
+// 5.
+const userNum = document.getElementById("digits");
+console.log(userNum);
+userNum.addEventListener("click", (event) => {
+    console.log("click!");
+    let digit;
+    let target = event.target;
+    if (target.tagName === 'BUTTON') {
+        //highlight(target);
+        digit = target.textContent;
+        console.log(digit);
+    }
+    
+});
+
 // 1. operators functions :
 const add = (a, b) => a + b ;
 //console.log(add(2, 4))
