@@ -44,19 +44,21 @@ This project is about creating a calculator. It should :
 
 
 
-* **make the buttons works** accordingly with JS, **each buttons displays when clicked** : num, operators and THEN the result
+* **make the buttons works** accordingly with JS, **each buttons displays when clicked** : num, operators and THEN the result **✅**
 * **add eventListener** for our buttons when "**click**"
 
 &nbsp;	- done for digits buttons **✅**
 
-* the num1, num2, operator are **stored Inside variables**
-* WHEN the **=** button is clicked : **triggers the func operate**
+	- done for operators \& equal **✅**
 
-&nbsp;	- func operate takes our stored variables as parameters, THEN run accordingly to operator (add, sub, etc.)
+* the num1, num2, operator are **stored Inside variables ✅**
+* WHEN the **=** button is clicked : **triggers the func operate ✅**
 
-&nbsp;	- output the Result and THEN **update the display with that Result**
+&nbsp;	- func operate takes our stored variables as parameters, THEN run accordingly to operator (add, sub, etc.)**✅**
 
-* **add func to Clear button** : when "click" it resets everything
+&nbsp;	- output the Result and THEN **update the display with that Result ✅**
+
+* **Last to do BEFORE step 7 : add func to Clear button** : when "click" it resets everything
 
 
 
