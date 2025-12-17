@@ -1,8 +1,12 @@
 // 5. link HTML digits buttons & Event 'click' :
 const userDigit = document.getElementById("digits");
-let currentNum = "";
 const display = document.getElementById("calculator");
-
+const userOperator = document.getElementById("operators");
+// 6.3 placed var to be accessed in global scope
+let currentNum = "";
+let num1 = "";
+let num2 = "";
+let operator = "";
 userDigit.addEventListener("click", (event) => {
     let digit;
     let target = event.target;
@@ -13,6 +17,17 @@ userDigit.addEventListener("click", (event) => {
         highlight(target);
     }
 });
+// 6. link HTML operators & Event 'click' :
+userOperator.addEventListener("click", (event) => {
+    num1 = currentNum; //6.1 store in num1
+    let target = event.target;
+    if (target.tagName === 'BUTTON') {
+        operator = target.textContent;
+        //display.textContent = operator; dont want display
+        highlight(target);
+        currentNum = "";//6.2 reset to get num2 later
+    }
+})
 
 // 1. operators functions :
 const add = (a, b) => a + b ;
