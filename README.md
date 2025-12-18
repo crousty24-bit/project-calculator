@@ -36,33 +36,63 @@ This project is about creating a calculator. It should :
 
 
 
---> structure and code is set and safe to continue further.
+*--> structure and code is set and safe to continue further.*
 
 
 
-**Next, I'll focus on step 5 \& 6 : WORKING ON...**
+**Next, I'll focus on step 5 \& 6 : DONE ✅**
 
 
 
 * **make the buttons works** accordingly with JS, **each buttons displays when clicked** : num, operators and THEN the result **✅**
 * **add eventListener** for our buttons when "**click**"
 
-&nbsp;	- done for digits buttons **✅**
+ 	- done for digits buttons **✅**
 
-	- done for operators, equal **✅**
+&nbsp;	- done for operators, equal \*\*✅\*\*
 
-* the num1, num2, operator are **stored Inside variables ✅**
+
+* the num1, num2, operator are **stored inside variables ✅**
 * WHEN the **=** button is clicked : **triggers the func operate ✅**
 
-&nbsp;	- func operate takes our stored variables as parameters, THEN run accordingly to operator (add, sub, etc.)**✅**
+ 	- func operate takes our stored variables as parameters, THEN run accordingly to operator (add, sub, etc.)**✅**
 
-&nbsp;	- output the Result and THEN **update the display with that Result ✅**
+ 	- output the Result and THEN **update the display with that Result ✅**
 
-* **Last to do BEFORE step 7 : add func to Clear button** : when "click" it resets everything
-
-
+* **add func clear button** : when "click" it resets everything and display **✅**
 
 
 
-*last update 17/12/25*
+*--> code is working as intended for now. We have a basic calculator, yay !*
+
+*--> as this point, I spent around 30min just to go around my whole code, from the beginning of the process, on each steps
+    to review everything I've done : this is to assure I have a "complete" understanding of what I've been doing/ learning from mistakes.
+    The real struggle was on step 6.4 when I had to figure out how to "verify" that num1, num1, operator actualy **exists** in order to be True
+    to call our Operate function. Well, solution was a lot simpler than I imagine.*
+
+
+
+**Next, I'll add some extra features, then go on step 7 for gotchas, bug fixes, reinforce logic : WORKING ON ..**
+
+
+
+* first, I'll focus on adding : 
+* 
+**&nbsp;	- handle divide by 0**
+
+&nbsp;	- **add decimals, add a . button**
+
+&nbsp;	- **add undo button** (backspace) 
+
+&nbsp;	- reinforce logic
+
+
+
+* then, I'll go on step 7 : 
+
+
+
+
+
+*last update 18/12/25*
 
