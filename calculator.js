@@ -25,8 +25,6 @@ userOperator.addEventListener("click", (event) => {
     let target = event.target;
     if (target.tagName === 'BUTTON') {
         operator = target.textContent;
-        //display.textContent = operator; dont want display
-        //highlight(target);
         currentNum = "";//6.2 reset to get num2 later
     }
 })
@@ -37,22 +35,18 @@ userEqual.addEventListener("click", (event) => {
         // 6.5 call func and convert :
         let result = operate(Number(num1), Number(num2), operator);
         display.textContent = result;
-        currentNum = result;// result become are new currentNum for next calc
+        currentNum = result;// result become new currentNum for next calc
     } 
 })
 
 // 1. operators functions :
 const add = (a, b) => a + b ;
-//console.log(add(2, 4))
 
 const subtract = (a, b) => a - b;
-//console.log(subtract(4, 2))
 
 const multiply = (a, b) => a * b;
-//console.log(multiply(2, 4))
 
 const divide = (a, b) => a / b;
-//console.log(divide(4, 2))
 
 // 2. & 3. operate function :
 const operate = (num1, num2, operator) => {
@@ -66,7 +60,3 @@ const operate = (num1, num2, operator) => {
         return divide(num1, num2)
     }
 }
-/*console.log(operate(4, 2, '+'));
-console.log(operate(4, 2, '-'));
-console.log(operate(4, 2, '*'));
-console.log(operate(4, 2, '/'));*/

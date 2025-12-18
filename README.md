@@ -49,7 +49,7 @@ This project is about creating a calculator. It should :
 
 &nbsp;	- done for digits buttons **✅**
 
-	- done for operators \& equal **✅**
+	- done for operators, equal **✅**
 
 * the num1, num2, operator are **stored Inside variables ✅**
 * WHEN the **=** button is clicked : **triggers the func operate ✅**
