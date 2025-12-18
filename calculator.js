@@ -37,12 +37,25 @@ userDigit.addEventListener("click", (event) => {
 });
 // 6. link HTML operators & Event 'click' :
 userOperator.addEventListener("click", (event) => {
-    num1 = currentNum; //6.1 store in num1
-    let target = event.target;
-    if (target.tagName === 'BUTTON') {
-        operator = target.textContent;
-        currentNum = "";//6.2 reset to get num2 later
-    }
+    // 7.3 second operator triggers operate result :
+    if (num1 && currentNum && operator) {
+        let result = operate(Number(num1), Number(currentNum), operator);
+        display.textContent = result;
+        num1 = result;
+        currentNum = "";
+        let target = event.target;
+        if (target.tagName === 'BUTTON') {
+         operator = target.textContent;
+         currentNum = "";
+        } return
+    // if there's no intermediate operation :
+    } else {
+        num1 = currentNum; //6.1 store in num1
+        let target = event.target;
+         if (target.tagName === 'BUTTON') {
+         operator = target.textContent;
+         currentNum = "";//6.2 reset to get num2 later
+    }}
 })
 // 6.4 linkHTML id"equal" & Event 'click' :
 userEqual.addEventListener("click", (event) => {
