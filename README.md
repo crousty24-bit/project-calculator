@@ -81,15 +81,21 @@ to call our Operate function. Well, solution was a lot simpler than I imagined.*
 
 &nbsp;	- **handle divide by 0** **✅**
 
- 	- **add decimals, add a . button**
+ 	- **add decimals, add a . button ✅**
 
- 	- **add undo button** (backspace)
+ 	- **add undo button** (backspace) **✅**
 
  	- reinforce logic
 
 
 
 * then, I'll go on step 7 :
+
+&nbsp;	- following TOP lists of things to verify and fix
+
+&nbsp;	- base logic of single pair of Numbers evaluated, even if :
+
+&nbsp;		- enter a second operator should evaluate intial pair of Numbers
 
 
 
