@@ -10,13 +10,23 @@ let currentNum = "";
 let num1 = "";
 let num2 = "";
 let operator = "";
+let justCalculated = false;
 
 userDigit.addEventListener("click", (event) => {
-    let digit;
     let target = event.target;
+    if (target.tagName !== 'BUTTON') return;
+    let digit = target.textContent;
+    /*currentNum += digit;*/
+    /*display.textContent = currentNum;*/
+    
+    if (justCalculated === true) {
+        currentNum = "";
+        justCalculated = false;
+    }
+    
     /*highlight(target);*/
-    if (target.tagName === 'BUTTON') {
-        digit = target.textContent;
+    /*if (target.tagName === 'BUTTON') {
+        digit = target.textContent;*/
         // 7.1 add decimals and button "." :
         if (digit === ".") {
             if (currentNum.includes(".")) {
@@ -31,34 +41,44 @@ userDigit.addEventListener("click", (event) => {
             return }
         } else {
             currentNum = `${currentNum}${digit}`;
+            /*currentNum += digit;*/
             display.textContent = currentNum;
         }  
-    }
+        
 });
 // 6. link HTML operators & Event 'click' :
 userOperator.addEventListener("click", (event) => {
+    let target = event.target;
+    if (target.tagName !== 'BUTTON') return;
+
+    if (justCalculated === true) {
+        operator = target.textContent;
+        justCalculated = false;
+        return
+    }
     // 7.3 second operator triggers operate result :
-    if (num1 && currentNum && operator) {
+    else if (num1 && currentNum && operator) {
         let result = operate(Number(num1), Number(currentNum), operator);
         display.textContent = result;
         num1 = result;
         currentNum = "";
         let target = event.target;
-        if (target.tagName === 'BUTTON') {
-         operator = target.textContent;
-         currentNum = "";
-        } return
+        operator = target.textContent;
+        return
     // if there's no intermediate operation :
     } else {
         num1 = currentNum; //6.1 store in num1
         let target = event.target;
-         if (target.tagName === 'BUTTON') {
-         operator = target.textContent;
-         currentNum = "";//6.2 reset to get num2 later
-    }}
+        operator = target.textContent;
+        currentNum = "";//6.2 reset to get num2 later
+    }
 })
 // 6.4 linkHTML id"equal" & Event 'click' :
 userEqual.addEventListener("click", (event) => {
+    // 7.4 click equal should not calc anything
+    if (justCalculated === true) {
+        return
+    }
     num2 = currentNum;// new currentNum become num2
     // 7. handle divide by 0 :
     if (operator === "/" && num2 === "0") {
@@ -75,6 +95,10 @@ userEqual.addEventListener("click", (event) => {
         let result = operate(Number(num1), Number(num2), operator);
         display.textContent = result;
         currentNum = result;// result become new currentNum for next calc
+        num1 = "";
+        num2 = "";
+        operator = "";
+        justCalculated = true; // signal that a result exists
     } 
 })
 // 6.6 link HTML id"clear" & Event 'click' : 
@@ -83,6 +107,7 @@ clear.addEventListener("click", (event) => {
     num1 = "";
     num2 = "";
     operator = "";
+    justCalculated = false;
     display.textContent = "";
 })
 // 7.2 link HTML id"undo" & Event 'click' : 
