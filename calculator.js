@@ -4,6 +4,7 @@ const display = document.getElementById("calculator");
 const userOperator = document.getElementById("operators");
 const userEqual = document.getElementById("equal");
 const clear = document.getElementById("clear");
+const undo = document.getElementById("undo");
 // 6.3 placed var to be accessed in global scope
 let currentNum = "";
 let num1 = "";
@@ -70,6 +71,13 @@ clear.addEventListener("click", (event) => {
     num2 = "";
     operator = "";
     display.textContent = "";
+})
+// 7.2 link HTML id"undo" & Event 'click' : 
+undo.addEventListener("click", (event) => {
+    if (currentNum !== "") {
+        currentNum = currentNum.slice(0, -1);
+        display.textContent = currentNum;
+    }
 })
 
 // 1. operators functions :
