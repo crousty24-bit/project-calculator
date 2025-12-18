@@ -95,7 +95,11 @@ to call our Operate function. Well, solution was a lot simpler than I imagined.*
 
 &nbsp;	- base logic of single pair of Numbers evaluated, even if :
 
-&nbsp;		- enter a second operator should evaluate intial pair of Numbers
+&nbsp;		- **enter a second operator should evaluate intial pair of Numbers** **✅**
+
+		**- equal should not operate anything if pressed multiple times** 
+
+		**- should not be able to add digits directly to a display result**
 
 
 
