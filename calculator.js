@@ -15,6 +15,9 @@ userDigit.addEventListener("click", (event) => {
     let target = event.target;
     if (target.tagName === 'BUTTON') {
         digit = target.textContent;
+        /* if (digit === ".") {
+            // Rules
+        } else { existing code*/
         currentNum = `${currentNum}${digit}`; // 5.1 store digit & display into div calculator
         display.textContent = currentNum;
         highlight(target);// will mark which digit is clicked
@@ -32,6 +35,16 @@ userOperator.addEventListener("click", (event) => {
 // 6.4 linkHTML id"equal" & Event 'click' :
 userEqual.addEventListener("click", (event) => {
     num2 = currentNum;// new currentNum become num2
+    // 7. handle divide by 0 :
+    if (operator === "/" && num2 === "0") {
+        alert('Error : Nice try');
+        currentNum = "";
+        num1 = "";
+        num2 = "";
+        operator = "";
+        display.textContent = "";
+        return
+    }
     if (num1 && num2 && operator) {// verify if var exists
         // 6.5 call func and convert :
         let result = operate(Number(num1), Number(num2), operator);

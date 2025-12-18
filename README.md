@@ -49,7 +49,8 @@ This project is about creating a calculator. It should :
 
  	- done for digits buttons **✅**
 
-&nbsp;	- done for operators, equal \*\*✅\*\*
+ 	- done for operators, equal ✅
+
 
 
 * the num1, num2, operator are **stored inside variables ✅**
@@ -65,10 +66,10 @@ This project is about creating a calculator. It should :
 
 *--> code is working as intended for now. We have a basic calculator, yay !*
 
-*--> as this point, I spent around 30min just to go around my whole code, from the beginning of the process, on each steps
-    to review everything I've done : this is to assure I have a "complete" understanding of what I've been doing/ learning from mistakes.
-    The real struggle was on step 6.4 when I had to figure out how to "verify" that num1, num1, operator actualy **exists** in order to be True
-    to call our Operate function. Well, solution was a lot simpler than I imagine.*
+*--> at this point, I spent around 30min just to go around my whole code, from the beginning of the process, on each steps
+to review everything I've done : this is to assure I have a "complete" understanding of what I've been doing/ learning from mistakes.
+The real struggle was on step 6.4 when I had to figure out how to "verify" that num1, num1, operator actualy **exists** in order to be True
+to call our Operate function. Well, solution was a lot simpler than I imagined.*
 
 
 
@@ -76,19 +77,19 @@ This project is about creating a calculator. It should :
 
 
 
-* first, I'll focus on adding : 
-* 
-**&nbsp;	- handle divide by 0**
+* first, I'll focus on adding :
 
-&nbsp;	- **add decimals, add a . button**
+&nbsp;	- **handle divide by 0** **✅**
 
-&nbsp;	- **add undo button** (backspace) 
+ 	- **add decimals, add a . button**
 
-&nbsp;	- reinforce logic
+ 	- **add undo button** (backspace)
+
+ 	- reinforce logic
 
 
 
-* then, I'll go on step 7 : 
+* then, I'll go on step 7 :
 
 
 
