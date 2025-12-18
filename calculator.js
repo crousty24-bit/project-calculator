@@ -13,14 +13,25 @@ let operator = "";
 userDigit.addEventListener("click", (event) => {
     let digit;
     let target = event.target;
+    /*highlight(target);*/
     if (target.tagName === 'BUTTON') {
         digit = target.textContent;
-        /* if (digit === ".") {
-            // Rules
-        } else { existing code*/
-        currentNum = `${currentNum}${digit}`; // 5.1 store digit & display into div calculator
-        display.textContent = currentNum;
-        highlight(target);// will mark which digit is clicked
+        // 7.1 add decimals and button "." :
+        if (digit === ".") {
+            if (currentNum.includes(".")) {
+            return }
+            else if (currentNum) {
+            currentNum = `${currentNum}.`;
+            display.textContent = currentNum;
+            }
+            else if (currentNum === "") {
+            currentNum = "0.";
+            display.textContent = currentNum;
+            return }
+        } else {
+            currentNum = `${currentNum}${digit}`;
+            display.textContent = currentNum;
+        }  
     }
 });
 // 6. link HTML operators & Event 'click' :
