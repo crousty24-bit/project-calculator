@@ -3,6 +3,7 @@ const userDigit = document.getElementById("digits");
 const display = document.getElementById("calculator");
 const userOperator = document.getElementById("operators");
 const userEqual = document.getElementById("equal");
+const clear = document.getElementById("clear");
 // 6.3 placed var to be accessed in global scope
 let currentNum = "";
 let num1 = "";
@@ -37,6 +38,14 @@ userEqual.addEventListener("click", (event) => {
         display.textContent = result;
         currentNum = result;// result become new currentNum for next calc
     } 
+})
+// 6.6 link HTML id"clear" & Event 'click' : 
+clear.addEventListener("click", (event) => {
+    currentNum = "";
+    num1 = "";
+    num2 = "";
+    operator = "";
+    display.textContent = "";
 })
 
 // 1. operators functions :
