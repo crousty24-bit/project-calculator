@@ -145,11 +145,13 @@ The main aspect I'm proud of : even when I felt lost or doing the 'wrong' thing,
 
 
 
-Alright, I think we are.. done ! 
+Alright, I think we are.. done !
+
+(add keyboard)
 
 
 
 
 
-*last update 19/12/25*
+*last update 19/12/25.*
 
