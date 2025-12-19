@@ -4,12 +4,14 @@ const userOperator = document.getElementById("operators");
 const userEqual = document.getElementById("equal");
 const clear = document.getElementById("clear");
 const undo = document.getElementById("undo");
+
 // 6.3 placed var to be accessed in global scope
 let currentNum = "";
 let num1 = "";
 let num2 = "";
 let operator = "";
 let justCalculated = false;
+
 // 5. link HTML digits buttons & Event 'click' :
 userDigit.addEventListener("click", (event) => {
     const target = event.target;
@@ -22,7 +24,7 @@ userDigit.addEventListener("click", (event) => {
         justCalculated = false;
     }
     const digit = target.textContent;
-        // 7.1 add decimals and button "." :
+    // 7.1 add decimals and button "." :
     if (digit === ".") {
         if (currentNum.includes(".")) {
             return }
@@ -61,9 +63,7 @@ userOperator.addEventListener("click", (event) => {
         currentNum = "";
          if (target.tagName === 'BUTTON') {
             operator = target.textContent;
-        }
-        return
-    // if there's no intermediate operation :
+        } return
     } else {
         if (!currentNum) return; // 7.3.2 secure if clicked operator w/o num
         num1 = currentNum; //6.1 store in num1
@@ -83,7 +83,7 @@ userEqual.addEventListener("click", (event) => {
     if (!num1 || !currentNum || !operator) {
         return
     }
-    num2 = currentNum;// new currentNum become num2
+    num2 = currentNum;
     // 7. handle divide by 0 :
     if (operator === "/" && num2 === "0") {
         alert('Error : Nice try');
@@ -94,7 +94,7 @@ userEqual.addEventListener("click", (event) => {
         display.textContent = "";
         return
     }
-    if (num1 && num2 && operator) {// verify if var exists
+    if (num1 && num2 && operator) {
         // 6.5 call func and convert :
         const result = operate(Number(num1), Number(num2), operator);
         // 7.7 roundup result to 2 decimals (same in operator listener) : 
@@ -104,7 +104,7 @@ userEqual.addEventListener("click", (event) => {
         num1 = "";
         num2 = "";
         operator = "";
-        justCalculated = true; // signal that a result exists
+        justCalculated = true;
     } 
 })
 // 6.6 link HTML id"clear" & Event 'click' : 
