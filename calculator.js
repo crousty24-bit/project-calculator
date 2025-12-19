@@ -55,8 +55,9 @@ userOperator.addEventListener("click", (event) => {
     // 7.3 second operator triggers operate result :
     if (num1 && currentNum && operator) {
         const result = operate(Number(num1), Number(currentNum), operator);
-        display.textContent = result;
-        num1 = result;
+        const rounded = Math.round(result * 100) / 100;
+        display.textContent = rounded;
+        num1 = rounded;
         currentNum = "";
          if (target.tagName === 'BUTTON') {
             operator = target.textContent;
@@ -96,8 +97,10 @@ userEqual.addEventListener("click", (event) => {
     if (num1 && num2 && operator) {// verify if var exists
         // 6.5 call func and convert :
         const result = operate(Number(num1), Number(num2), operator);
-        display.textContent = result;
-        currentNum = result;// result become new currentNum for next calc
+        // 7.7 roundup result to 2 decimals (same in operator listener) : 
+        const rounded = Math.round(result * 100) / 100;
+        display.textContent = rounded;
+        currentNum = rounded;// rounded become new currentNum for next calc
         num1 = "";
         num2 = "";
         operator = "";
