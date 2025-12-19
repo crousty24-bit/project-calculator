@@ -12,33 +12,32 @@ let operator = "";
 let justCalculated = false;
 // 5. link HTML digits buttons & Event 'click' :
 userDigit.addEventListener("click", (event) => {
+    // 7.5 handle digits after a result :
+    if (justCalculated === true) {
+        currentNum = "";
+        justCalculated = false;
+    }
+
     const target = event.target;
     if (target.tagName !== 'BUTTON') return;
     let digit = target.textContent;
-    /*currentNum += digit;*/
-    /*display.textContent = currentNum;*/
-    
-    /*highlight(target);*/
-    /*if (target.tagName === 'BUTTON') {
-        digit = target.textContent;*/
         // 7.1 add decimals and button "." :
-        if (digit === ".") {
-            if (currentNum.includes(".")) {
+    if (digit === ".") {
+        if (currentNum.includes(".")) {
             return }
-            else if (currentNum) {
+        else if (currentNum) {
             currentNum = `${currentNum}.`;
             display.textContent = currentNum;
             }
-            else if (currentNum === "") {
+        else if (currentNum === "") {
             currentNum = "0.";
             display.textContent = currentNum;
             return }
         } else {
-            currentNum = `${currentNum}${digit}`;
-            /*currentNum += digit;*/
-            display.textContent = currentNum;
+            currentNum = `${currentNum}${digit}`; //standard concat
         }  
-        
+        display.textContent = currentNum;
+        /*highlight(target);*/
 });
 // 6. link HTML operators & Event 'click' :
 userOperator.addEventListener("click", (event) => {
