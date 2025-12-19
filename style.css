@@ -1,7 +1,9 @@
 /* 8.0 Flexbox & CSS */
 :root {
   --clr-dark: #1f2020;
+  --clr-lightdark: #343535;
   --clr-light: #f1f5f9;
+  --clr-light2: #f3e3d5;
   --clr-accent: #d68c38;
 }
 
@@ -14,8 +16,8 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
-  background-color: var(--clr-dark);
+  font-family: monospace, sans-serif;
+  background-color: var(--clr-light2);
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -23,16 +25,19 @@ body {
 }
 
 h1 {
-    color: var(--clr-light);
+    color: var(--clr-dark);
+    font-size: 48px;
+    text-transform: uppercase;
 }
 
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 280px;
-    height: 480px;
-    border : 2px solid red;
+    width: 380px;
+    background-color: var(--clr-dark);
+    border: 4px solid var(--clr-lightdark);
+    border-radius: 10px;
 }
 
 .display {
@@ -40,34 +45,52 @@ h1 {
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
-    height: 80px;
-    width: 250px;
-    border: 2px solid grey
+    height: 100px;
+    width: 100%;
+    padding: 8px;
+}
+
+#calculator {
+    color: #f1f5f9;
+    font-size: 36px;
+    font-weight: 700;
 }
 
 .interface {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 250px;
-    /*height: 250px;*/
-    border: 2px solid black;
+    width: 100%;
 }
 
 .buttons {
     display: flex;
+    width: 100%;
+}
+
+button {
+    height: 60px;
+    font-size: 1.5rem;
+    color: #f1f5f9;
+    border: 1px solid var(--clr-light2);
+    border-radius: 8px;
+    cursor: pointer;
 }
 
 #digits {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
-    border: 1px solid blue;
     width: 75%;
 }
 
 #digits button {
     width: 33%;
+    background-color: #343535;
+}
+
+#digits .large {
+    flex-basis: 66%;
 }
 
 #operators {
@@ -78,13 +101,19 @@ h1 {
 
 #operators button {
     flex: 1;
+    background-color: #d68c38;
 }
 
 .bottom-row {
     display: flex;
-    width: 250px;
+    width: 100%;
 }
 
 .bottom-row button {
     flex: 1;
+    background-color: #343535;
+}
+
+.bottom-row #equal {
+    background-color: #d68c38;
 }
