@@ -73,7 +73,7 @@ to call our Operate function. Well, solution was a lot simpler than I imagined.*
 
 
 
-**Next, I'll add some extra features, then go on step 7 for gotchas, bug fixes, reinforce logic : WORKING ON ..**
+**Next, I'll add some extra features, then go on step 7 for gotchas, bug fixes, reinforce logic : DONE ✅**
 
 
 
@@ -85,7 +85,7 @@ to call our Operate function. Well, solution was a lot simpler than I imagined.*
 
  	- **add undo button** (backspace) **✅**
 
- 	- reinforce logic **✅**
+ 	- **reinforce logic** **✅**
 
 
 
@@ -112,14 +112,28 @@ to call our Operate function. Well, solution was a lot simpler than I imagined.*
 
 &nbsp;		- when a Result is calculated after pressing "=" : **press "=" again should not calc anything (from previous operation)✅**
 
-&nbsp;		- same as been verified when a Result if calculated after an intermediate operation such as : 10 + 10 *(20)* - 2 =
+&nbsp;		- same as been verified when a Result if calculated after an intermediate operation such as : 10 + 10 *(20)* - 2 = … **✅**
 
 &nbsp;		
-	- last, round answers with long decimals (display)
+	- last, round answers with long decimals (display) : **add logic to roundup answers to 2 decimals ✅**
+
+*--> code is working as intended. Now, the base logic is reinforced and all(?) potentials bugs have been fixed accordingly.*
+
+*--> some parts in step 7 were really difficult to come around but in the end, I managed to make it work. I've learned a lot during this process.
+The main aspect I'm proud of : even when I felt lost or doing the 'wrong' thing, struggling hard etc. => most of time I always come with the good logic, the right mindset and process to get to the bottom of an issue, even if I use the wrong method (e.g. no you cant use that the way you think*
+
+*it will work) or messed up syntax.
+--> at this point, we meet every requirements from TOP project : a fully functionnal calculator !*
 
 
 
 
+
+**Last, the dessert : adding Flexbox and CSS properties. This is our step 8 :** **WORKING ON ..**
+
+
+
+* 
 
 
 
