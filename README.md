@@ -120,20 +120,32 @@ to call our Operate function. Well, solution was a lot simpler than I imagined.*
 *--> code is working as intended. Now, the base logic is reinforced and all(?) potentials bugs have been fixed accordingly.*
 
 *--> some parts in step 7 were really difficult to come around but in the end, I managed to make it work. I've learned a lot during this process.
-The main aspect I'm proud of : even when I felt lost or doing the 'wrong' thing, struggling hard etc. => most of time I always come with the good logic, the right mindset and process to get to the bottom of an issue, even if I use the wrong method (e.g. no you cant use that the way you think*
-
-*it will work) or messed up syntax.
+The main aspect I'm proud of : even when I felt lost or doing the 'wrong' thing, struggling hard etc. => most of time I always come with the good logic, the right mindset and process to get to the bottom of an issue, even if I use the wrong method (e.g. no you cant use that the way you think it will work) or messed up syntax.
 --> at this point, we meet every requirements from TOP project : a fully functionnal calculator !*
 
 
 
 
 
-**Last, the dessert : adding Flexbox and CSS properties. This is our step 8 :** **WORKING ON ..**
+**Last, the dessert : adding Flexbox and CSS properties. This is our step 8 :** **DONE ✅**
 
 
 
-* 
+* **add display flex on divs** : make it looks like a "standard iphone calculator" layout **✅**
+
+&nbsp;	- minor bug fix : flex-end was causing my upper row blocs of buttons being slightly offset comparing to the bottom-row (undo, ac, "=")
+
+&nbsp;	removing it simply fixed issue, it's now aligned.
+
+
+
+* **add colors and style** (borders, size, font) to match that iphone calculator **✅**
+* **change text display** (result) **✅**
+* **add a small highlight effect** when a digit/operator button is pressed : use of .classList.add() and setTimeout **✅**
+
+
+
+Alright, I think we are.. done ! 
 
 
 
