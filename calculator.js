@@ -12,16 +12,11 @@ let operator = "";
 let justCalculated = false;
 // 5. link HTML digits buttons & Event 'click' :
 userDigit.addEventListener("click", (event) => {
-    let target = event.target;
+    const target = event.target;
     if (target.tagName !== 'BUTTON') return;
     let digit = target.textContent;
     /*currentNum += digit;*/
     /*display.textContent = currentNum;*/
-    
-    if (justCalculated === true) {
-        currentNum = "";
-        justCalculated = false;
-    }
     
     /*highlight(target);*/
     /*if (target.tagName === 'BUTTON') {
@@ -81,6 +76,10 @@ userEqual.addEventListener("click", (event) => {
     if (justCalculated === true) {
         return
     }
+    // 7.4.1 secure we do have every elements :
+    if (!num1 || !currentNum || !operator) {
+        return
+    }
     num2 = currentNum;// new currentNum become num2
     // 7. handle divide by 0 :
     if (operator === "/" && num2 === "0") {
@@ -94,12 +93,9 @@ userEqual.addEventListener("click", (event) => {
     }
     if (num1 && num2 && operator) {// verify if var exists
         // 6.5 call func and convert :
-        let result = operate(Number(num1), Number(num2), operator);
+        const result = operate(Number(num1), Number(num2), operator);
         display.textContent = result;
         currentNum = result;// result become new currentNum for next calc
-        num1 = "";
-        num2 = "";
-        operator = "";
         justCalculated = true; // signal that a result exists
     } 
 })
