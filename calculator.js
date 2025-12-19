@@ -1,4 +1,3 @@
-// 5. link HTML digits buttons & Event 'click' :
 const userDigit = document.getElementById("digits");
 const display = document.getElementById("calculator");
 const userOperator = document.getElementById("operators");
@@ -11,7 +10,7 @@ let num1 = "";
 let num2 = "";
 let operator = "";
 let justCalculated = false;
-
+// 5. link HTML digits buttons & Event 'click' :
 userDigit.addEventListener("click", (event) => {
     let target = event.target;
     if (target.tagName !== 'BUTTON') return;
@@ -48,28 +47,31 @@ userDigit.addEventListener("click", (event) => {
 });
 // 6. link HTML operators & Event 'click' :
 userOperator.addEventListener("click", (event) => {
-    let target = event.target;
-    if (target.tagName !== 'BUTTON') return;
+    const target = event.target;
+    if (target.tagName !== "BUTTON") return;// 7.3.1 secure if click on container != button
 
-    if (justCalculated === true) {
+    /*if (justCalculated === true) {
         operator = target.textContent;
         justCalculated = false;
         return
-    }
+    }*/
     // 7.3 second operator triggers operate result :
-    else if (num1 && currentNum && operator) {
-        let result = operate(Number(num1), Number(currentNum), operator);
+    if (num1 && currentNum && operator) {
+        const result = operate(Number(num1), Number(currentNum), operator);
         display.textContent = result;
         num1 = result;
         currentNum = "";
-        let target = event.target;
-        operator = target.textContent;
+         if (target.tagName === 'BUTTON') {
+            operator = target.textContent;
+        }
         return
     // if there's no intermediate operation :
     } else {
+        if (!currentNum) return; // 7.3.2 secure if clicked operator w/o num
         num1 = currentNum; //6.1 store in num1
-        let target = event.target;
-        operator = target.textContent;
+         if (target.tagName === 'BUTTON') {
+            operator = target.textContent;
+        }
         currentNum = "";//6.2 reset to get num2 later
     }
 })
