@@ -79,31 +79,51 @@ to call our Operate function. Well, solution was a lot simpler than I imagined.*
 
 * first, I'll focus on adding :
 
-&nbsp;	- **handle divide by 0** **✅**
+ 	- **handle divide by 0** **✅**
 
  	- **add decimals, add a . button ✅**
 
  	- **add undo button** (backspace) **✅**
 
- 	- reinforce logic
+ 	- reinforce logic **✅**
 
 
 
 * then, I'll go on step 7 :
 
-&nbsp;	- following TOP lists of things to verify and fix
+ 	- **following TOP lists of things to verify and fix**
 
-&nbsp;	- base logic of single pair of Numbers evaluated, even if :
+ 	- base logic of single pair of Numbers evaluated, even if : (from step 7.3 to 7.6)
 
-&nbsp;		- **enter a second operator should evaluate intial pair of Numbers** **✅**
+ 		- **enter a second operator should evaluate intial pair of Numbers** **✅**
 
-		**- equal should not operate anything if pressed multiple times** 
+&nbsp;		- **equal should not operate anything if pressed multiple times** **✅**
+		- **should not be able to add digits directly to a display result** **✅**
 
-		**- should not be able to add digits directly to a display result**
-
-
-
+		**- consecutive operators should not calc anything ✅**
 
 
-*last update 18/12/25*
+
+	**-** bug fixes : *(this was a sweat)*
+
+&nbsp;		- when a Result is calculated after pressing "=" : **press a new operator should not take previous num and adding it to Result✅**
+
+&nbsp;		- when a Result is calculated after pressing "=" : **press digits should start automaticly a new operation✅**
+
+&nbsp;		- when a Result is calculated after pressing "=" : **press "=" again should not calc anything (from previous operation)✅**
+
+&nbsp;		- same as been verified when a Result if calculated after an intermediate operation such as : 10 + 10 *(20)* - 2 =
+
+&nbsp;		
+	- last, round answers with long decimals (display)
+
+
+
+
+
+
+
+
+
+*last update 19/12/25*
 
