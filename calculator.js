@@ -16,6 +16,9 @@ let justCalculated = false;
 userDigit.addEventListener("click", (event) => {
     const target = event.target;
     if (target.tagName !== 'BUTTON') return;
+    // 8.1 button press effect :
+    target.classList.add('active');
+    setTimeout(() => target.classList.remove('active'), 100);
     // 7.5 handle digits after a result w/ reset:
     if (justCalculated === true) {
         currentNum = "";
@@ -46,6 +49,9 @@ userDigit.addEventListener("click", (event) => {
 userOperator.addEventListener("click", (event) => {
     const target = event.target;
     if (target.tagName !== "BUTTON") return;// 7.3.1 secure if click on container != button
+    
+    target.classList.add('active');
+    setTimeout(() => target.classList.remove('active'), 100);
     // 7.6 bug fix when operator takes ancient currentNum
     if (justCalculated === true) {
         num1 = currentNum;
