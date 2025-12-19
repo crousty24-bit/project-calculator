@@ -12,15 +12,16 @@ let operator = "";
 let justCalculated = false;
 // 5. link HTML digits buttons & Event 'click' :
 userDigit.addEventListener("click", (event) => {
-    // 7.5 handle digits after a result :
-    if (justCalculated === true) {
-        currentNum = "";
-        justCalculated = false;
-    }
-
     const target = event.target;
     if (target.tagName !== 'BUTTON') return;
-    let digit = target.textContent;
+    // 7.5 handle digits after a result w/ reset:
+    if (justCalculated === true) {
+        currentNum = "";
+        num1 = "";
+        operator = "";
+        justCalculated = false;
+    }
+    const digit = target.textContent;
         // 7.1 add decimals and button "." :
     if (digit === ".") {
         if (currentNum.includes(".")) {
@@ -43,12 +44,14 @@ userDigit.addEventListener("click", (event) => {
 userOperator.addEventListener("click", (event) => {
     const target = event.target;
     if (target.tagName !== "BUTTON") return;// 7.3.1 secure if click on container != button
-
-    /*if (justCalculated === true) {
+    // 7.6 bug fix when operator takes ancient currentNum
+    if (justCalculated === true) {
+        num1 = currentNum;
+        currentNum = "";
         operator = target.textContent;
         justCalculated = false;
         return
-    }*/
+    }
     // 7.3 second operator triggers operate result :
     if (num1 && currentNum && operator) {
         const result = operate(Number(num1), Number(currentNum), operator);
@@ -95,6 +98,9 @@ userEqual.addEventListener("click", (event) => {
         const result = operate(Number(num1), Number(num2), operator);
         display.textContent = result;
         currentNum = result;// result become new currentNum for next calc
+        num1 = "";
+        num2 = "";
+        operator = "";
         justCalculated = true; // signal that a result exists
     } 
 })
